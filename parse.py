@@ -10,9 +10,9 @@ app = Flask(__name__)
 class ParseEvents:
 
     def __init__(self):
-        self.url = 'https://www.python.org/events/python-events/'
-        self.html = self.get_html()
         self.base_url = 'https://www.python.org'
+        self.url = self.base_url+'/events/python-events/'
+        self.html = self.get_html()
 
     def get_html(self):
         try:
